@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    //*******************************QUESTION NO 06*************************************//
+    <h1>Random Number Generator</h1>
+    <button onclick="generateRandomNumber()">Generate Number</button>
+    <p id="result"></p>
+
+    //*******************************QUESTION NO 07*************************************//
+    <h1>Weight Converter</h1>
+    <input type="text" id="weightInput" placeholder="Enter weight">
+    <button onclick="parseWeight()">Convert</button>
+    <p id="result"></p>
+
+    
+    //*******************************QUESTION NO 08*************************************//
+    <h1>Guess the Number</h1>
+    <p>Enter a number between 1 and 10:</p>
+    <input type="number" id="numberInput" min="1" max="10">
+    <button onclick="guessNumber()">Guess</button>
+    <p id="result"></p>
+
+    //*******************************QUESTION NO 01 OF DATA METHODS*************************************//
+    <h1>Current Date and Time</h1>
+    <button onclick="displayDateTime()">Show Date and Time</button>
+    <p id="result"></p>
+
+    //*******************************QUESTION NO 02 OF DATA METHODS*************************************//
+    <h1>Current Month</h1>
+    <button onclick="alertCurrentMonth()">Alert Month</button>
+
+    
+    //*******************************QUESTION NO 03 OF DATA METHODS*************************************//
+    <h1>Current Day Abbreviation</h1>
+    <button onclick="alertCurrentDayAbbreviation()">Alert Day Abbreviation</button>
+
+    
+    //*******************************QUESTION NO 04 OF DATA METHODS*************************************//
+    <h1>Fun Day Checker</h1>
+    <button onclick="checkFunDay()">Check Fun Day</button>
+
+    //*******************************QUESTION NO 05 OF DATA METHODS*************************************//
+    <h1>Date Checker</h1>
+    <button onclick="checkDate()">Check Date</button>
+
+
+    //*******************************QUESTION NO 07 OF DATA METHODS*************************************//
+    <h1>Time Checker</h1>
+    <button onclick="checkTime()">Check Time</button>
+
+    
+    //*******************************QUESTION NO 10 OF DATA METHODS*************************************//
+    <h1>Elapsed Seconds</h1>
+    <button onclick="displayElapsedSeconds()">Display Elapsed Seconds</button>
+    <p id="output"></p>
+
+    //*******************************QUESTION NO 11 OF DATA METHODS*************************************//
+    <h1>Reset Date Object</h1>
+    <button onclick="resetDate()">Reset Date</button>
+    <p id="output"></p>
+
+    //*******************************QUESTION NO 12 OF DATA METHODS*************************************//
+    <h1>Reset Date Object</h1>
+    <button onclick="resetDate()">Reset Date</button>
+
+    //*******************************QUESTION NO 13 OF DATA METHODS*************************************//
+    <h1>Birth Year Calculator</h1>
+    <button onclick="calculateBirthYear()">Calculate Birth Year</button>
+    <p id="output"></p>
+
+    //*******************************QUESTION NO 14 OF DATA METHODS*************************************//
+    <h1>K-Electric Bill Generator</h1>
+    <button onclick="generateBill()">Generate Bill</button>
+    <div id="output"></div>
+
+    <script>
+        //*******************************QUESTION NO 01*************************************//
+        // Take input from the user
+        var number = parseInt(prompt("Enter a positive integer:"));
+
+        // Calculate the rounded value
+        var roundedValue = Math.round(number);
+
+        // Calculate the floor value
+        var floorValue = Math.floor(number);
+
+        // Calculate the ceiling value
+        var ceilingValue = Math.ceil(number);
+
+        // Display the results in the browser
+        document.write("<p>Number: " + number + "</p>");
+        document.write("<p>Rounded Value: " + roundedValue + "</p>");
+        document.write("<p>Floor Value: " + floorValue + "</p>");
+        document.write("<p>Ceiling Value: " + ceilingValue + "</p>");
+
+    //*******************************QUESTION NO 02*************************************//
+      
+        var number = parseFloat(prompt("Enter a negative floating-point number:"));
+
+      
+        var roundedValue = Math.round(number);
+
+       
+        var floorValue = Math.floor(number);
+
+        var ceilingValue = Math.ceil(number);
+
+        document.write("<p>Number: " + number + "</p>");
+        document.write("<p>Rounded Value: " + roundedValue + "</p>");
+        document.write("<p>Floor Value: " + floorValue + "</p>");
+        document.write("<p>Ceiling Value: " + ceilingValue + "</p>");
+
+//*******************************QUESTION NO 03*************************************//
+        // Take input from the user
+        var number = parseFloat(prompt("Enter a number:"));
+
+        // Calculate the absolute value
+        var absoluteValue = Math.abs(number);
+
+        // Display the absolute value
+        document.write("<p>Absolute value of " + number + " is " + absoluteValue + "</p>");
+
+//*******************************QUESTION NO 04*************************************//
+                // Simulate a dice roll
+        var diceValue = Math.floor(Math.random() * 6) + 1;
+
+        // Display the dice value in the browser
+        document.write("<p>The dice rolled: " + diceValue + "</p>");
+
+//*******************************QUESTION NO 05*************************************//
+        function simulateCoinToss() {
+                    var randomNumber = Math.random(); // Generate a random number between 0 and 1
+
+                    if (randomNumber < 0.5) {
+                        // If the random number is less than 0.5, consider it as "Heads"
+                        document.getElementById("result").innerHTML = "Heads";
+                    } else {
+                        // Otherwise, consider it as "Tails"
+                        document.getElementById("result").innerHTML = "Tails";
+                    }
+        }
+
+//*******************************QUESTION NO 06*************************************//
+         function generateRandomNumber() {
+            var randomNumber = Math.floor(Math.random() * 100) + 1; // Generate a random number between 1 and 100
+            document.getElementById("result").innerHTML = randomNumber;
+        }
+
+
+//*******************************QUESTION NO 07*************************************//
+          function parseWeight() {
+                var userInput = document.getElementById("weightInput").value;
+                var weight;
+
+                // Check if the user input contains "kgs" or "kilograms" and extract the numeric value
+                if (userInput.includes("kgs")) {
+                    weight = parseFloat(userInput);
+                } else if (userInput.includes("kilograms")) {
+                    weight = parseFloat(userInput);
+                } else {
+                    weight = parseFloat(userInput);
+                }
+
+            // Display the parsed weight in the browser
+            document.getElementById("result").innerHTML = "Weight: " + weight + " kgs";
+        }
+
+//*******************************QUESTION NO 08*************************************//
+        function guessNumber() {
+            var secretNumber = Math.floor(Math.random() * 10) + 1; // Generate a random secret number between 1 and 10
+            var userInput = parseInt(document.getElementById("numberInput").value);
+
+            if (userInput === secretNumber) {
+                document.getElementById("result").innerHTML = "Congratulations! You guessed the secret number.";
+            } else {
+                document.getElementById("result").innerHTML = "Sorry, your guess is incorrect. The secret number was " + secretNumber + ".";
+            }
+        }
+
+//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^DATA METHOD^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^//
+
+//*******************************QUESTION NO 01*************************************//
+
+        function displayDateTime() {
+            var currentDateTime = new Date(); // Get the current date and time
+            document.getElementById("result").innerHTML = "Current Date and Time: " + currentDateTime;
+        }
+
+
+//*******************************QUESTION NO 02*************************************//
+        function alertCurrentMonth() {
+            var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+            var currentDate = new Date();
+            var currentMonth = months[currentDate.getMonth()];
+            alert("Current Month: " + currentMonth);
+        }
+
+//*******************************QUESTION NO 03*************************************//
+        function alertCurrentDayAbbreviation() {
+            var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+            var currentDate = new Date();
+            var currentDay = currentDate.getDay();
+            var currentDayAbbreviation = days[currentDay];
+            alert("Current Day Abbreviation: " + currentDayAbbreviation);
+        }
+
+//*******************************QUESTION NO 04*************************************//
+        function checkFunDay() {
+            var currentDate = new Date();
+            var currentDay = currentDate.getDay();
+
+            if (currentDay === 0 || currentDay === 6) {
+                alert("It's Fun day");
+            } else {
+                alert("It's not Fun day");
+            }
+        }
+
+//*******************************QUESTION NO 05*************************************//
+        function checkDate() {
+            var currentDate = new Date();
+            var currentDay = currentDate.getDate();
+
+            if (currentDay < 16) {
+                alert("First fifteen days of the month");
+            } else {
+                alert("Last days of the month");
+            }
+        }
+
+//*******************************QUESTION NO 06*************************************//
+// Determine the minutes since midnight, Jan. 1, 1970
+var minutesSinceEpoch = Date.now() / (1000 * 60);
+
+// Display the result
+console.log("Minutes since midnight, Jan. 1, 1970: " + minutesSinceEpoch);
+
+
+
+
+//*******************************QUESTION NO 07*************************************//
+        function checkTime() {
+            var currentTime = new Date();
+            var currentHour = currentTime.getHours();
+
+            if (currentHour < 12) {
+                alert("It's AM");
+            } else {
+                alert("It's PM");
+            }
+        }
+
+//*******************************QUESTION NO 08*************************************//
+        var laterDate = new Date(2020, 11, 31);
+
+        console.log("Later Date: " + laterDate);
+
+//*******************************QUESTION NO 09*************************************//
+        var startingDate = new Date(2015, 5, 18); // Note: Month is zero-based, so 5 represents June
+
+        // Calculate the number of days that have passed since the 1st Ramadan
+        var currentDate = new Date();
+        var timeDifference = currentDate.getTime() - startingDate.getTime();
+        var daysPassed = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+        // Alert the number of days passed since the 1st Ramadan
+        alert("Number of days passed since 1st Ramadan: " + daysPassed);
+
+
+//*******************************QUESTION NO 10*************************************//
+        function displayElapsedSeconds() {
+            var referenceDate = new Date(); // Use the current date as the reference
+            var beginningOf2015 = new Date(2015, 0, 1); // January 1, 2015
+
+            var timeDifference = referenceDate.getTime() - beginningOf2015.getTime();
+            var elapsedSeconds = Math.floor(timeDifference / 1000);
+
+            document.getElementById("output").innerHTML = "Seconds elapsed since the beginning of 2015: " + elapsedSeconds;
+        }
+
+//*******************************QUESTION NO 11*************************************//
+        function resetDate() {
+            var currentDate = new Date();
+            var currentHours = currentDate.getHours();
+
+            currentDate.setHours(currentHours + 1);
+
+            document.getElementById("output").innerHTML = "Updated Date: " + currentDate;
+        }
+
+//*******************************QUESTION NO 12*************************************//
+        function resetDate() {
+            var currentDate = new Date();
+            var year = currentDate.getFullYear();
+            var resetDate = new Date(year - 100, currentDate.getMonth(), currentDate.getDate());
+
+            alert("Reset Date: " + resetDate);
+        }
+
+  //*******************************QUESTION NO 13*************************************//      
+        function calculateBirthYear() {
+            var age = prompt("Enter your age:");
+            var currentYear = new Date().getFullYear();
+            var birthYear = currentYear - age;
+
+            document.getElementById("output").innerHTML = "Your birth year is: " + birthYear;
+        }
+
+     //*******************************QUESTION NO 14*************************************//  
+        function generateBill() {
+            var customerName = prompt("Enter Customer Name:");
+            var currentMonth = prompt("Enter Current Month:");
+            var numberOfUnits = parseFloat(prompt("Enter Number of Units:"));
+            var chargesPerUnit = parseFloat(prompt("Enter Charges per Unit:"));
+            var latePaymentSurcharge = parseFloat(prompt("Enter Late Payment Surcharge:"));
+
+            var netAmountPayable = (numberOfUnits * chargesPerUnit).toFixed(2);
+            var grossAmountPayable = (netAmountPayable + latePaymentSurcharge).toFixed(2);
+
+            var billDetails = "Customer Name: " + customerName + "<br>" +
+                              "Current Month: " + currentMonth + "<br>" +
+                              "Number of Units: " + numberOfUnits + "<br>" +
+                              "Charges per Unit: " + chargesPerUnit + "<br>" +
+                              "Net Amount Payable (within Due Date): $" + netAmountPayable + "<br>" +
+                              "Late Payment Surcharge: $" + latePaymentSurcharge + "<br>" +
+                              "Gross Amount Payable (after Due Date): $" + grossAmountPayable;
+
+            document.getElementById("output").innerHTML = billDetails;
+        }
+
+    </script>
+</body>
+</html>
+
